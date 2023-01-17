@@ -1,22 +1,25 @@
-﻿
-//Задача 41. Пользователь водит с клавиатуры М чисел. 
-//Посчитайте, сколько чисел больше 0 ввёл пользователь.
+﻿// Задача 43. Напишите программу, которая найдёт точку пересечения 2-х прямых, заданных уравнением
+// y = k1 * x + b1
+// y = k2 * x + b2;
+// значение b1, k1, b2 и k2 задаются пользоватлем.
 
 //v.0.1.my
 
-Console.WriteLine("сколько чисел будете вводить? ");
-int lng = Convert.ToInt32(Console.ReadLine());
-int[] a = new int[lng];
-int count = 0;
+Console.WriteLine("введите b1: ");
 
-Console.WriteLine("вводите числа: ");
+double k1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("длина стороны b2 = ");
+double b1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("длина стороны k2 = ");
+double k2 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("длина стороны k1 = ");
+double b2 = Convert.ToInt32(Console.ReadLine());
 
-for (int i = 0; i < a.Length; ++i)
-{
-    a[i] = int.Parse(Console.ReadLine());
-    //Console.WriteLine($"{a[i]}");
-    if (a[i]>0)
-    {count = count + 1;}
-}
-Console.Write("чисел больше нуля = ");
-Console.WriteLine(count);
+double x = (((b1-b2)*-1)/(k1-k2));
+double y = (k2 * x) + b2;
+
+Console.Write(x);
+Console.Write(",");
+Console.Write(y);
+
+Console.WriteLine();
